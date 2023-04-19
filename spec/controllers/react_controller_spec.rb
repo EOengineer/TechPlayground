@@ -1,4 +1,6 @@
-require 'rails_helper.rb'
+# frozen_string_literal: true
+
+require 'rails_helper'
 
 RSpec.describe ReactController do
   describe '#home' do
