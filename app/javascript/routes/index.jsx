@@ -5,7 +5,7 @@ import ReactHome from "../components/ReactHome";
 export default (
   <Router>
     <Routes>
-      <Route path="/" element={<ReactHome />} />
+      <Route path="/react/home" element={<ReactHome />} />
     </Routes>
   </Router>
 );
