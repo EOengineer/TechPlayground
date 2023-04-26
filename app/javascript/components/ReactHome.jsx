@@ -6,7 +6,7 @@ export default () => (
   <div className="vw-100 vh-100 primary-color d-flex align-items-center justify-content-center">
     <div className="mt-4 p-5 bg-transparent rounded">
       <Container fluid className="secondary-color"> 
-      <h1 className="display-4">React Homepage</h1>
+      <h1 className="display-4">React Projects</h1>
            <p className="lead">
              This page is rendered using ReactJS.
            </p>
