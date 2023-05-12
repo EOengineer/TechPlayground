@@ -1,7 +1,14 @@
-<div>
-  <h1>Homepage</h1>
-  <div>
-    <%= link_to "Hotwire Page", hotwire_home_path %>
-    <%= link_to "React Page", react_home_path %>
+<div class="vw-100 vh-100 primary-color d-flex align-items-center justify-content-center">
+  <div class="mt-4 p-5 bg-transparent rounded">
+    <div class="secondary-color container-fluid">
+      <h1 class="display-4">Eric Oligney</h1>
+      <p class="lead">This page features projects built using the following technologies.</p>
+      <hr class="my-4">
+
+      <%= link_to "Hotwire", hotwire_home_path, class: 'btn btn-lg custom-button' %>
+      <%= link_to "React", react_home_path, class: 'btn btn-lg custom-button' %>
+      <%= link_to "Rails", react_home_path, class: 'btn btn-lg custom-button' %>
+      <%= link_to "Redis", react_home_path, class: 'btn btn-lg custom-button' %>
+    </div>
   </div>
 </div>
