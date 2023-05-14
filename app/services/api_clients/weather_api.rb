@@ -15,7 +15,7 @@ module ApiClients
     BASE_URL = Rails.application.credentials.weather.api_base_url
     TOKEN = Rails.application.credentials.weather.api_key
 
-    attr_reader :section, :zip_code
+    attr_reader :zip_code
 
     def initialize(zip_code: '22602')
       @zip_code = zip_code
