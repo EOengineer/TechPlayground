@@ -35,6 +35,10 @@ module ApiClients
 
     private
 
+    def base_url
+      raise NotImplementedError
+    end
+
     def headers_base
       { 'Accept' => 'application/json' }
     end
@@ -59,7 +63,7 @@ module ApiClients
     end
 
     def build_uri(path, query: {})
-      uri = URI(self.class::BASE_URL + path)
+      uri = URI(base_url + path)
       uri.query = build_uri_query(query: query)
       uri
     end
