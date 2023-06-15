@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# rubocop:disable Metrics/BlockLength
 describe ApiClients::Base do
   describe 'http methods' do
     subject { described_class.new }
@@ -36,3 +37,4 @@ describe ApiClients::Base do
     end
   end
 end
+# rubocop:enable Metrics/BlockLength
