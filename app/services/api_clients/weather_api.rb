@@ -12,6 +12,7 @@ module ApiClients
       time_zone: 'timezone.json'
     }.freeze
 
+    BASE_URL = Rails.application.credentials.weather.api_base_url
     DEFAULT_LOCATION_IDENTIFIER = '22602'
     TOKEN = Rails.application.credentials.weather.api_key
 
@@ -43,11 +44,6 @@ module ApiClients
     end
 
     private
-
-    # override
-    def base_url
-      Rails.application.credentials.weather.api_base_url
-    end
 
     def weather_api_query_params
       { key: TOKEN, q: zip_code }
