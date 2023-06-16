@@ -3,6 +3,8 @@
 require 'net/http'
 
 module ApiClients
+  class MissingRequiredArgumentError < StandardError; end
+
   class Base
     def initialize; end
 

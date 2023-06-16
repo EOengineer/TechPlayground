@@ -20,6 +20,8 @@ module ApiClients
 
     def initialize(zip_code: DEFAULT_LOCATION_IDENTIFIER)
       super()
+      raise ApiClients::MissingRequiredArgumentError, 'Zip code is required' if zip_code.blank?
+
       @zip_code = zip_code
     end
 
