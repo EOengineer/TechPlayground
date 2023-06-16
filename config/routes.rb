@@ -6,4 +6,8 @@ Rails.application.routes.draw do
 
   get '/hotwire/home', to: 'hotwire#home'
   get '/react/home', to: 'react#home'
+
+  namespace :api, constraints: { format: 'json' } do
+    get '/weather', to: 'weather#index'
+  end
 end

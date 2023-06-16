@@ -2,7 +2,7 @@
 
 require 'net/http'
 
-module ApiClients
+module APIClients
   class Base
     def initialize; end
 
@@ -82,6 +82,6 @@ module ApiClients
     end
   end
 
-  class ApiError < StandardError; end
+  class APIError < StandardError; end
   class MissingRequiredArgumentError < StandardError; end
 end

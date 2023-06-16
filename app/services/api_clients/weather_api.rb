@@ -2,8 +2,8 @@
 
 require 'net/http'
 
-module ApiClients
-  class WeatherApi < Base
+module APIClients
+  class WeatherAPI < Base
     API_SECTIONS = {
       current: 'current.json',
       forecast: 'forecast.json',
@@ -20,7 +20,7 @@ module ApiClients
 
     def initialize(zip_code: DEFAULT_LOCATION_IDENTIFIER)
       super()
-      raise ApiClients::MissingRequiredArgumentError, 'Zip code is required' if zip_code.blank?
+      raise APIClients::MissingRequiredArgumentError, 'Zip code is required' if zip_code.blank?
 
       @zip_code = zip_code
     end

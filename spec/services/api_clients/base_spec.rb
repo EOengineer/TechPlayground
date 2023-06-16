@@ -3,7 +3,7 @@
 require 'rails_helper'
 
 # rubocop:disable Metrics/BlockLength
-describe ApiClients::Base do
+describe APIClients::Base do
   describe 'http methods' do
     subject { described_class.new }
     let(:query_params) { { key: 'value' } }
