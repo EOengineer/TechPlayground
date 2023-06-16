@@ -45,6 +45,10 @@ module ApiClients
 
     private
 
+    def base_url
+      BASE_URL
+    end
+
     def weather_api_query_params
       { key: TOKEN, q: zip_code }
     end
