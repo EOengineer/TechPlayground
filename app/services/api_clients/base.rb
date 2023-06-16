@@ -3,8 +3,6 @@
 require 'net/http'
 
 module ApiClients
-  class MissingRequiredArgumentError < StandardError; end
-
   class Base
     def initialize; end
 
@@ -42,7 +40,7 @@ module ApiClients
 
     # override in subclass for specialized headers
     def headers
-      { 'Accept' => 'application/json', 'Content-Type' => 'application/json' }
+      # ex. { 'Accept' => 'application/json' }
     end
 
     def make_request(klass, path, query: {}, headers: {}, body: {})
@@ -75,7 +73,15 @@ module ApiClients
     def handle_response(http:, request:)
       response = http.request(request)
 
-      JSON.parse(response.body) if response.body.present?
+      case response.code.to_i
+      when 200..299
+        JSON.parse(response.body) if response.body.present?
+      else
+        raise ApiClients::ApiError, "API Error: #{response.code} - #{response.body}"
+      end
     end
   end
+
+  class ApiError < StandardError; end
+  class MissingRequiredArgumentError < StandardError; end
 end
