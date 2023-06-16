@@ -34,7 +34,7 @@ describe ApiClients::WeatherApi do
 
     it 'has weather api query params' do
       expect(subject.send(:weather_api_query_params))
-      .to eq(key: Rails.application.credentials.weather.api_key, q: zip_code)
+        .to eq(key: Rails.application.credentials.weather.api_key, q: zip_code)
     end
   end
 end
