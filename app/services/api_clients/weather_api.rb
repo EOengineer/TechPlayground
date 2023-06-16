@@ -49,6 +49,10 @@ module ApiClients
       BASE_URL
     end
 
+    def headers
+      { 'Accept' => 'application/json', 'Content-Type' => 'application/json' }
+    end
+
     def weather_api_query_params
       { key: TOKEN, q: zip_code }
     end

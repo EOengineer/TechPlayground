@@ -11,40 +11,36 @@ module ApiClients
     end
 
     def post(path:, query: {}, body: {})
-      make_request(Net::HTTP::Post, path, query: query, body: body, headers: writeable_headers)
+      make_request(Net::HTTP::Post, path, query: query, body: body, headers: headers)
     end
 
     def patch(path:, query: {}, body: {})
-      make_request(Net::HTTP::Patch, path, query: query, body: body, headers: writeable_headers)
+      make_request(Net::HTTP::Patch, path, query: query, body: body, headers: headers)
     end
 
     def put(path:, query: {}, body: {})
-      make_request(Net::HTTP::Put, path, query: query, body: body, headers: writeable_headers)
+      make_request(Net::HTTP::Put, path, query: query, body: body, headers: headers)
     end
 
     def delete(path:, query: {})
       make_request(Net::HTTP::Delete, path, query: query)
     end
 
-    protected
+    private
+
+    # define in subclass - required
+    def base_url
+      raise NotImplementedError, 'Base URL must be defined in subclass'
+    end
 
     # subclasses can override to provide a different query builder
     def build_uri_query(query: {})
       Rack::Utils.build_query(query) if query.present?
     end
 
-    private
-
-    def base_url
-      raise NotImplementedError, 'Base URL must be defined in subclass'
-    end
-
-    def headers_base
-      { 'Accept' => 'application/json' }
-    end
-
-    def writeable_headers
-      headers_base.merge({ 'Content-Type' => 'application/json' })
+    # override in subclass for specialized headers
+    def headers
+      { 'Accept' => 'application/json', 'Content-Type' => 'application/json' }
     end
 
     def make_request(klass, path, query: {}, headers: {}, body: {})
