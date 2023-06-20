@@ -8,6 +8,6 @@ Rails.application.routes.draw do
   get '/react/home', to: 'react#home'
 
   namespace :api, constraints: { format: 'json' } do
-    get '/weather', to: 'weather#index'
+    get '/weather', to: 'weather#index', as: :weather_index
   end
 end

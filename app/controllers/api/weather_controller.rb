@@ -3,7 +3,12 @@
 module API
   class WeatherController < API::BaseController
     def index
-      render json: weather_api_client.current_weather
+      render json: {
+        current: weather_api_client.current_weather,
+        forecast: weather_api_client.forecast,
+        astronomy: weather_api_client.astronomy,
+        time_zone: weather_api_client.time_zone
+      }
     end
 
     private

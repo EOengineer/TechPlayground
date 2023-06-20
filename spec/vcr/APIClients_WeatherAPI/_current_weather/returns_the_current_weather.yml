@@ -1,0 +1,64 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.weatherapi.com/v1/current.json?key=721a457162d949829ad172324231205&q=22602
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 20 Jun 2023 19:47:44 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Server:
+      - BunnyCDN-IL1-718
+      Cdn-Pullzone:
+      - '93447'
+      Cdn-Uid:
+      - 8fa3a04a-75d9-4707-8056-b7b33c8ac7fe
+      Cdn-Requestcountrycode:
+      - US
+      Cache-Control:
+      - public, max-age=180
+      Cdn-Proxyver:
+      - '1.03'
+      Cdn-Requestpullsuccess:
+      - 'True'
+      Cdn-Requestpullcode:
+      - '200'
+      Cdn-Cachedat:
+      - 06/20/2023 19:47:44
+      Cdn-Edgestorageid:
+      - '871'
+      Cdn-Status:
+      - '200'
+      Cdn-Requestid:
+      - a31248aaab0e7af18248ea9e15e0ed77
+      Cdn-Cache:
+      - EXPIRED
+    body:
+      encoding: ASCII-8BIT
+      string: '{"location":{"name":"Winchester","region":"Virginia","country":"USA","lat":39.17,"lon":-78.15,"tz_id":"America/New_York","localtime_epoch":1687290464,"localtime":"2023-06-20
+        15:47"},"current":{"last_updated_epoch":1687290300,"last_updated":"2023-06-20
+        15:45","temp_c":25.0,"temp_f":77.0,"is_day":1,"condition":{"text":"Partly
+        cloudy","icon":"//cdn.weatherapi.com/weather/64x64/day/116.png","code":1003},"wind_mph":11.9,"wind_kph":19.1,"wind_degree":110,"wind_dir":"ESE","pressure_mb":1019.0,"pressure_in":30.08,"precip_mm":0.7,"precip_in":0.03,"humidity":57,"cloud":75,"feelslike_c":26.7,"feelslike_f":80.1,"vis_km":16.0,"vis_miles":9.0,"uv":5.0,"gust_mph":13.0,"gust_kph":20.9}}'
+  recorded_at: Tue, 20 Jun 2023 19:47:44 GMT
+recorded_with: VCR 6.1.0

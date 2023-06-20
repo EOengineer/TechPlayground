@@ -1,0 +1,63 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.weatherapi.com/v1/astronomy.json?key=721a457162d949829ad172324231205&q=22602
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 20 Jun 2023 19:54:00 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Server:
+      - BunnyCDN-IL1-1070
+      Cdn-Pullzone:
+      - '93447'
+      Cdn-Uid:
+      - 8fa3a04a-75d9-4707-8056-b7b33c8ac7fe
+      Cdn-Requestcountrycode:
+      - US
+      Cache-Control:
+      - public, max-age=180
+      Cdn-Proxyver:
+      - '1.03'
+      Cdn-Requestpullsuccess:
+      - 'True'
+      Cdn-Requestpullcode:
+      - '200'
+      Cdn-Cachedat:
+      - 06/20/2023 19:54:00
+      Cdn-Edgestorageid:
+      - '871'
+      Cdn-Status:
+      - '200'
+      Cdn-Requestid:
+      - 342540309b2c0f6e889227e586a931ad
+      Cdn-Cache:
+      - MISS
+    body:
+      encoding: ASCII-8BIT
+      string: '{"location":{"name":"Winchester","region":"Virginia","country":"USA","lat":39.17,"lon":-78.15,"tz_id":"America/New_York","localtime_epoch":1687290840,"localtime":"2023-06-20
+        15:54"},"astronomy":{"astro":{"sunrise":"05:47 AM","sunset":"08:42 PM","moonrise":"07:36
+        AM","moonset":"11:07 PM","moon_phase":"Waxing Crescent","moon_illumination":"3","is_moon_up":1,"is_sun_up":1}}}'
+  recorded_at: Tue, 20 Jun 2023 19:54:00 GMT
+recorded_with: VCR 6.1.0

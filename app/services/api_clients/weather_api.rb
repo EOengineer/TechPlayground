@@ -7,7 +7,6 @@ module APIClients
     API_SECTIONS = {
       current: 'current.json',
       forecast: 'forecast.json',
-      future: 'future.json',
       astronomy: 'astronomy.json',
       time_zone: 'timezone.json'
     }.freeze
@@ -31,10 +30,6 @@ module APIClients
 
     def forecast
       get path: API_SECTIONS[:forecast], query: weather_api_query_params
-    end
-
-    def future_weather
-      get path: API_SECTIONS[:future], query: weather_api_query_params
     end
 
     def astronomy

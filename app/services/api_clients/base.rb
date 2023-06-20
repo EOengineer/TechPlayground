@@ -77,7 +77,7 @@ module APIClients
       when 200..299
         JSON.parse(response.body) if response.body.present?
       else
-        raise ApiClients::ApiError, "API Error: #{response.code} - #{response.body}"
+        raise APIClients::APIError, "API Error: #{response.code} - #{response.body}"
       end
     end
   end
