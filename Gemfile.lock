@@ -89,6 +89,12 @@ GEM
     diff-lcs (1.5.0)
     e2mmap (0.1.0)
     erubi (1.12.0)
+    faraday (2.7.7)
+      faraday-net_http (>= 2.0, < 3.1)
+      ruby2_keywords (>= 0.0.4)
+    faraday-multipart (1.0.4)
+      multipart-post (~> 2)
+    faraday-net_http (3.0.2)
     ffi (1.15.5)
     globalid (1.1.0)
       activesupport (>= 5.0)
@@ -122,6 +128,9 @@ GEM
     mini_mime (1.1.2)
     minitest (5.18.0)
     msgpack (1.7.0)
+    multipart-post (2.3.0)
+    neighbor (0.2.3)
+      activerecord (>= 5.2)
     net-imap (0.3.4)
       date
       net-protocol
@@ -219,7 +228,11 @@ GEM
       activesupport (>= 4.2.0)
       rack (>= 1.1)
       rubocop (>= 1.33.0, < 2.0)
+    ruby-openai (4.2.0)
+      faraday (>= 1)
+      faraday-multipart (>= 1)
     ruby-progressbar (1.13.0)
+    ruby2_keywords (0.0.5)
     sassc (2.4.0)
       ffi (~> 1.9)
     sassc-rails (2.1.2)
@@ -291,6 +304,7 @@ DEPENDENCIES
   debug
   jbuilder
   jsbundling-rails
+  neighbor
   pg (~> 1.1)
   pry-rails
   puma (~> 5.0)
@@ -298,6 +312,7 @@ DEPENDENCIES
   redis (~> 4.0)
   rspec-rails (~> 6.0.0)
   rubocop-rails
+  ruby-openai
   sassc-rails
   solargraph
   solargraph-rails
