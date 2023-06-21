@@ -2,7 +2,6 @@
 
 require 'rails_helper'
 
-# rubocop:disable Metrics/BlockLength
 describe APIClients::Base do
   describe 'http methods' do
     subject { described_class.new }
@@ -39,4 +38,3 @@ describe APIClients::Base do
     end
   end
 end
-# rubocop:enable Metrics/BlockLength
