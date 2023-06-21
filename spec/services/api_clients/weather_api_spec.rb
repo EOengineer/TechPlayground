@@ -4,7 +4,6 @@
 
 require 'rails_helper'
 
-# rubocop:disable Metrics/BlockLength
 describe APIClients::WeatherAPI, :vcr do
   subject { described_class.new(zip_code: zip_code) }
   let(:zip_code) { '22602' }
@@ -82,4 +81,3 @@ describe APIClients::WeatherAPI, :vcr do
     end
   end
 end
-# rubocop:enable Metrics/BlockLength

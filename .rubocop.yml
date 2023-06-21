@@ -1,6 +1,10 @@
 require: rubocop-rails
 
+Metrics/BlockLength:
+  Enabled: false
+
 Style/Documentation:
   Enabled: false
+  
 Style/HashSyntax:
   Enabled: false

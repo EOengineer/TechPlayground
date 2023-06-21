@@ -9,5 +9,6 @@ Rails.application.routes.draw do
 
   namespace :api, constraints: { format: 'json' } do
     get '/weather', to: 'weather#index', as: :weather_index
+    resources :questions, only: [:create]
   end
 end
