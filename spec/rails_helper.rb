@@ -71,6 +71,9 @@ end
 
 VCR.configure do |c|
   c.cassette_library_dir = 'spec/vcr'
-  c.hook_into :webmock
   c.configure_rspec_metadata!
+  c.hook_into :webmock
+  # Filter out API keys and other sensitive data.
+  c.filter_sensitive_data('<OPENAI_ACCESS_TOKEN>') { Rails.application.credentials.openai.access_token }
+  c.filter_sensitive_data('<WEATHER_API_KEY>') { Rails.application.credentials.weather.api_key }
 end

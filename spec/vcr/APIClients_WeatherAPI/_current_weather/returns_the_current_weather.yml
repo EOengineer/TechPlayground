@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://api.weatherapi.com/v1/current.json?key=721a457162d949829ad172324231205&q=22602
+    uri: http://api.weatherapi.com/v1/current.json?key=<WEATHER_API_KEY>&q=22602
     body:
       encoding: US-ASCII
       string: ''
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 20 Jun 2023 19:47:44 GMT
+      - Thu, 22 Jun 2023 18:31:44 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -29,7 +29,7 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Server:
-      - BunnyCDN-IL1-718
+      - BunnyCDN-IL1-1070
       Cdn-Pullzone:
       - '93447'
       Cdn-Uid:
@@ -45,20 +45,19 @@ http_interactions:
       Cdn-Requestpullcode:
       - '200'
       Cdn-Cachedat:
-      - 06/20/2023 19:47:44
+      - 06/22/2023 18:31:43
       Cdn-Edgestorageid:
       - '871'
       Cdn-Status:
       - '200'
       Cdn-Requestid:
-      - a31248aaab0e7af18248ea9e15e0ed77
+      - 0a151438e4b06b6616a533dfd1f83e44
       Cdn-Cache:
-      - EXPIRED
+      - MISS
     body:
       encoding: ASCII-8BIT
-      string: '{"location":{"name":"Winchester","region":"Virginia","country":"USA","lat":39.17,"lon":-78.15,"tz_id":"America/New_York","localtime_epoch":1687290464,"localtime":"2023-06-20
-        15:47"},"current":{"last_updated_epoch":1687290300,"last_updated":"2023-06-20
-        15:45","temp_c":25.0,"temp_f":77.0,"is_day":1,"condition":{"text":"Partly
-        cloudy","icon":"//cdn.weatherapi.com/weather/64x64/day/116.png","code":1003},"wind_mph":11.9,"wind_kph":19.1,"wind_degree":110,"wind_dir":"ESE","pressure_mb":1019.0,"pressure_in":30.08,"precip_mm":0.7,"precip_in":0.03,"humidity":57,"cloud":75,"feelslike_c":26.7,"feelslike_f":80.1,"vis_km":16.0,"vis_miles":9.0,"uv":5.0,"gust_mph":13.0,"gust_kph":20.9}}'
-  recorded_at: Tue, 20 Jun 2023 19:47:44 GMT
+      string: '{"location":{"name":"Winchester","region":"Virginia","country":"USA","lat":39.17,"lon":-78.15,"tz_id":"America/New_York","localtime_epoch":1687458703,"localtime":"2023-06-22
+        14:31"},"current":{"last_updated_epoch":1687457700,"last_updated":"2023-06-22
+        14:15","temp_c":16.0,"temp_f":60.8,"is_day":1,"condition":{"text":"Mist","icon":"//cdn.weatherapi.com/weather/64x64/day/143.png","code":1030},"wind_mph":8.1,"wind_kph":13.0,"wind_degree":30,"wind_dir":"NNE","pressure_mb":1019.0,"pressure_in":30.09,"precip_mm":4.5,"precip_in":0.18,"humidity":94,"cloud":100,"feelslike_c":16.0,"feelslike_f":60.8,"vis_km":4.8,"vis_miles":2.0,"uv":4.0,"gust_mph":9.6,"gust_kph":15.5}}'
+  recorded_at: Thu, 22 Jun 2023 18:31:44 GMT
 recorded_with: VCR 6.1.0

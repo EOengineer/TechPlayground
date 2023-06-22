@@ -11,7 +11,7 @@ describe APIClients::ChatClient, :vcr do
   describe '#ask' do
     context 'with a question' do
       it 'returns the current weather' do
-        expect(subject.ask(question: question)).to eq('Pi rounded to 3 decimal positions is 3.142.')
+        expect(subject.ask(question)).to eq('Pi rounded to 3 decimal positions is 3.142.')
       end
     end
 

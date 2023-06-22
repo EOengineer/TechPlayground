@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://api.weatherapi.com/v1/astronomy.json?key=721a457162d949829ad172324231205&q=22602
+    uri: http://api.weatherapi.com/v1/astronomy.json?key=<WEATHER_API_KEY>&q=22602
     body:
       encoding: US-ASCII
       string: ''
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 20 Jun 2023 19:54:00 GMT
+      - Thu, 22 Jun 2023 18:31:44 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -45,19 +45,19 @@ http_interactions:
       Cdn-Requestpullcode:
       - '200'
       Cdn-Cachedat:
-      - 06/20/2023 19:54:00
+      - 06/22/2023 18:31:44
       Cdn-Edgestorageid:
       - '871'
       Cdn-Status:
       - '200'
       Cdn-Requestid:
-      - 342540309b2c0f6e889227e586a931ad
+      - ffa21e73b227a558689dcce36619a56b
       Cdn-Cache:
       - MISS
     body:
       encoding: ASCII-8BIT
-      string: '{"location":{"name":"Winchester","region":"Virginia","country":"USA","lat":39.17,"lon":-78.15,"tz_id":"America/New_York","localtime_epoch":1687290840,"localtime":"2023-06-20
-        15:54"},"astronomy":{"astro":{"sunrise":"05:47 AM","sunset":"08:42 PM","moonrise":"07:36
-        AM","moonset":"11:07 PM","moon_phase":"Waxing Crescent","moon_illumination":"3","is_moon_up":1,"is_sun_up":1}}}'
-  recorded_at: Tue, 20 Jun 2023 19:54:00 GMT
+      string: '{"location":{"name":"Winchester","region":"Virginia","country":"USA","lat":39.17,"lon":-78.15,"tz_id":"America/New_York","localtime_epoch":1687458704,"localtime":"2023-06-22
+        14:31"},"astronomy":{"astro":{"sunrise":"05:47 AM","sunset":"08:42 PM","moonrise":"09:39
+        AM","moonset":"No moonset","moon_phase":"Waxing Crescent","moon_illumination":"13","is_moon_up":1,"is_sun_up":1}}}'
+  recorded_at: Thu, 22 Jun 2023 18:31:44 GMT
 recorded_with: VCR 6.1.0

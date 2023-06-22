@@ -11,7 +11,7 @@ http_interactions:
       Content-Type:
       - application/json
       Authorization:
-      - Bearer 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
+      - Bearer <OPENAI_ACCESS_TOKEN>
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -24,7 +24,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 21 Jun 2023 21:44:31 GMT
+      - Thu, 22 Jun 2023 18:31:41 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -40,7 +40,7 @@ http_interactions:
       Openai-Organization:
       - user-wvqmmygdcy7vmgh4chlk3kiy
       Openai-Processing-Ms:
-      - '844'
+      - '790'
       Openai-Version:
       - '2020-10-01'
       Strict-Transport-Security:
@@ -54,26 +54,26 @@ http_interactions:
       X-Ratelimit-Remaining-Tokens:
       - '39976'
       X-Ratelimit-Reset-Requests:
-      - 38.676s
+      - 36.263s
       X-Ratelimit-Reset-Tokens:
       - 36ms
       X-Request-Id:
-      - e1d6216167e81e9e06eda1c0f325c2c7
+      - b99e001f6edf10b8db69991f1bac64c8
       Cf-Cache-Status:
       - DYNAMIC
       Server:
       - cloudflare
       Cf-Ray:
-      - 7daf6ee84d899c2a-IAD
+      - 7db691bafcad801b-IAD
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: |
         {
-          "id": "chatcmpl-7TzupASxXKhB3KcxQHmrVTaFI1bJu",
+          "id": "chatcmpl-7UJNk8hysA2di9bETlWidxHIk9oIN",
           "object": "chat.completion",
-          "created": 1687383871,
+          "created": 1687458700,
           "model": "gpt-3.5-turbo-0301",
           "choices": [
             {
@@ -91,5 +91,5 @@ http_interactions:
             "total_tokens": 24
           }
         }
-  recorded_at: Wed, 21 Jun 2023 21:44:32 GMT
+  recorded_at: Thu, 22 Jun 2023 18:31:41 GMT
 recorded_with: VCR 6.1.0
